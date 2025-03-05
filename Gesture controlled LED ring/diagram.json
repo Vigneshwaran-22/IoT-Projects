@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Vigneshwaran",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-mpu6050", "id": "imu1", "top": -101.78, "left": 31.12, "attrs": {} },
+    {
+      "type": "wokwi-led-ring",
+      "id": "ring1",
+      "top": 29.44,
+      "left": -85.21,
+      "attrs": { "pixels": "16" }
+    }
+  ],
+  "connections": [
+    [ "imu1:VCC", "nano:5V", "red", [ "v-19.2", "h19.28" ] ],
+    [ "imu1:GND", "nano:GND.1", "black", [ "v-38.4", "h48.08" ] ],
+    [ "imu1:SCL", "nano:A5", "yellow", [ "v0" ] ],
+    [ "imu1:SDA", "nano:A4", "white", [ "h-9.52", "v158.4" ] ],
+    [ "ring1:DIN", "nano:6", "green", [ "v9.6", "h38.4" ] ],
+    [ "ring1:VCC", "nano:5V", "cyan", [ "v19.2", "h153.6" ] ],
+    [ "ring1:GND", "nano:GND.1", "#8f4814", [ "v28.8", "h211.2" ] ]
+  ],
+  "dependencies": {}
+}
