@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Vigneshwaran",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 115.8, "left": -10.2, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -309.2, "left": 34.4, "attrs": {} },
+    { "type": "wokwi-servo", "id": "servo1", "top": 26.8, "left": -201.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "keypad1:R1", "uno:2", "green", [ "v57.6", "h96" ] ],
+    [ "keypad1:R2", "uno:3", "green", [ "v67.2", "h76.4" ] ],
+    [ "keypad1:R3", "uno:4", "green", [ "v76.8", "h57.3" ] ],
+    [ "keypad1:R4", "uno:5", "green", [ "v86.4", "h28.6" ] ],
+    [ "keypad1:C1", "uno:6", "green", [ "v0" ] ],
+    [ "keypad1:C2", "uno:7", "green", [ "v0" ] ],
+    [ "keypad1:C3", "uno:8", "green", [ "v0" ] ],
+    [ "keypad1:C4", "uno:9", "green", [ "v0" ] ],
+    [ "servo1:GND", "uno:GND.2", "black", [ "h-67.2", "v230.5" ] ],
+    [ "servo1:V+", "uno:5V", "red", [ "h-48", "v57.5", "h399.4" ] ],
+    [ "servo1:PWM", "uno:10", "orange", [ "h-19.2", "v67.4", "h345.6" ] ]
+  ],
+  "dependencies": {}
+}
