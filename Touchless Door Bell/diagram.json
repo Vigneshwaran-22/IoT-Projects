@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Vigneshwaran",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 29.4, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-flame-sensor",
+      "id": "led1",
+      "top": -81.8,
+      "left": -16.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -84,
+      "left": 241.8,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "led1:VCC", "uno:5V", "red", [ "h28.8", "v259.2", "h-48" ] ],
+    [ "led1:GND", "uno:GND.1", "black", [ "h9.6", "v76.7", "h-76.8" ] ],
+    [ "bz1:1", "uno:GND.2", "black", [ "v0" ] ],
+    [ "bz1:2", "uno:3", "red", [ "v0" ] ],
+    [ "led1:DOUT", "uno:2", "violet", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
